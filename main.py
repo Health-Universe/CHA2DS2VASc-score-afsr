@@ -35,29 +35,35 @@ class ChadsVascFormInput(BaseModel):
         example="male",
         description="Select your biological sex.",
     )
-    congestive_heart_failure: bool = Field(
+    congestive_heart_failure: bool | None = Field(
         title="Congestive Heart Failure",
         example=True,
+        default=False,
         description="Do you have a history of congestive heart failure?",
     )
-    hypertension: bool = Field(
+    hypertension: bool | None = Field(
         title="Hypertension",
         example=True,
+        default=False,
         description="Do you have hypertension?",
     )
-    stroke_tia: bool = Field(
+    stroke_tia: bool | None = Field(
         title="Stroke / TIA",
         example=True,
+        default=False,
         description="Have you experienced a stroke or TIA?",
     )
-    vascular_disease: bool = Field(
+    vascular_disease: bool | None = Field(
         title="Vascular Disease",
         example=True,
+        default=False,
         description="Do you have vascular disease?",
     )
-    diabetes: bool = Field(
+    diabetes: bool | None = Field(
         title="Diabetes",
         example=True,
+
+        default=False,
         description="Do you have diabetes?",
     )
 
